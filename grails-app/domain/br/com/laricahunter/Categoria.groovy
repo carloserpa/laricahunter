@@ -5,4 +5,5 @@ class Categoria {
     static constraints = {
         nome(blank: false)
     }
+    //Comment
 }
