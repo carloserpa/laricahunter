@@ -104,7 +104,6 @@
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-aop:4.1.7.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-beans:4.1.7.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-expression:4.1.7.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.springframework:spring-aspects:4.1.7.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.aspectj:aspectjrt:1.8.5" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.grails:grails-web-gsp:3.0.3" level="project" />
@@ -164,6 +163,7 @@
     <orderEntry type="library" exported="" name="Gradle: com.goldmansachs:gs-collections-api:5.1.0" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.slf4j:slf4j-api:1.7.12" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.javassist:javassist:3.18.1-GA" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: org.aspectj:aspectjweaver:1.8.6" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: org.grails.plugins:asset-pipeline:3.0.3" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: org.grails.plugins:scaffolding:3.0.3" level="project" />
