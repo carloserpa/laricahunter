@@ -2,7 +2,7 @@ package br.com.laricahunter
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
-
+//Categoria Controller
 @Transactional(readOnly = true)
 class CategoriaController {
 
