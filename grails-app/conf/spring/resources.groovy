@@ -1,3 +1,6 @@
 // Place your Spring DSL code here
-beans = {
-}
+import laricahuntersecurity.SecurityConfiguration  
+  
+beans = {  
+   webSecurityConfiguration(SecurityConfiguration)  
+}  

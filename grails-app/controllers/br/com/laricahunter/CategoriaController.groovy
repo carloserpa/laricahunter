@@ -14,7 +14,7 @@ class CategoriaController {
     }
 
     def show(Categoria categoria) {
-        respond categoria
+        respond categoria        
     }
 
     def create() {

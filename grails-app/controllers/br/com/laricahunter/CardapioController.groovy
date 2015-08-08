@@ -13,6 +13,13 @@ class CardapioController {
         respond Cardapio.list(params), model:[cardapioCount: Cardapio.count()]
     }
 
+    def image= {
+        def something = Cardapio.get( params.id )
+        byte[] image = something.avatar
+        response.outputStream << image
+    }
+
+
     def show(Cardapio cardapio) {
         respond cardapio
     }
@@ -47,6 +54,13 @@ class CardapioController {
     }
 
     def edit(Cardapio cardapio) {
+        /*def oldAvatar = cardapio.avatar
+ 
+        cardapio.properties = params
+         
+        if(!cardapio.avatar){
+            cardapio.avatar = oldAvatar;
+        }*/
         respond cardapio
     }
 

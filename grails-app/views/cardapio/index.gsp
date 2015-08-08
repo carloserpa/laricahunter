@@ -18,7 +18,33 @@
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${cardapioList}" />
+            <!--<f:table collection="${cardapioList}" />-->
+            
+            <table>                
+                <thead>
+                    <tr>
+                        <g:sortableColumn property="descricao" defaultOrder="asc" title="Descrição"/>
+                        <g:sortableColumn property="preco" defaultOrder="asc" title="Preço"/>
+                        <th>Imagem</th>
+                        <g:sortableColumn property="categoria" defaultOrder="asc" title="Categoria"/>
+                        <g:sortableColumn property="produto" defaultOrder="asc" title="Produto"/>
+                    </tr>
+                </thead>
+                <tbody>
+                    <g:each in="${cardapioList}" var="cardapio">                                    
+                    <tr>                      
+                        <td><g:link action="show" resource="${cardapio}">${cardapio.descricao}</g:link></td>  
+                        <td>${cardapio.preco}</td>  
+                        <td>                        
+                            <img width="50" height="50" src="${createLink(controller:'cardapio', action:'image', id: cardapio.id)}"/>
+                        </td>               
+                        <td><g:link action="show" resource="${cardapio.categoria}">${cardapio.categoria}</g:link></td>  
+                        <td><g:link action="show" resource="${cardapio.produto}">${cardapio.produto}</g:link></td>      
+                     </tr>
+                     </g:each>                      
+                    
+                </tbody>
+            </table>
 
             <div class="pagination">
                 <g:paginate total="${cardapioCount ?: 0}" />

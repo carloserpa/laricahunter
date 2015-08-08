@@ -18,7 +18,32 @@
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${estabelecimentoList}" />
+            <!--<f:table collection="${estabelecimentoList}" /> -->
+            <table>                
+                <thead>
+                    <tr>
+                        <g:sortableColumn property="cnpj" defaultOrder="asc" title="CNPJ"/>
+                        <g:sortableColumn property="nomefantasia" defaultOrder="asc" title="Nome Fantasia"/>
+                        <th>Imagem</th>                        
+                        <th>Fone</th>
+                        <th>Horário Funcionamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <g:each in="${estabelecimentoList}" var="estabelecimento">                                    
+                    <tr>                      
+                        <td><g:link action="show" resource="${estabelecimento}">${estabelecimento.cnpj}</g:link></td>  
+                        <td>${estabelecimento.nomefantasia}</td>  
+                        <td>                        
+                            <img width="50" height="50" src="${createLink(controller:'estabelecimento', action:'image', id: estabelecimento.id)}"/>
+                        </td>               
+                        <td>${estabelecimento.fone1}</td>  
+                        <td><g:formatDate format="HH:mm" date="${estabelecimento.horaabertura}"/> : <g:formatDate format="HH:mm" date="${estabelecimento.horafechamento}"/></td>  
+                     </tr>
+                     </g:each>                      
+                    
+                </tbody>
+            </table>
 
             <div class="pagination">
                 <g:paginate total="${estabelecimentoCount ?: 0}" />

@@ -13,6 +13,12 @@ class EstabelecimentoController {
         respond Estabelecimento.list(params), model:[estabelecimentoCount: Estabelecimento.count()]
     }
 
+    def image= {
+        def something = Estabelecimento.get( params.id )
+        byte[] image = something.avatar
+        response.outputStream << image
+    }
+
     def show(Estabelecimento estabelecimento) {
         respond estabelecimento
     }

@@ -25,7 +25,7 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form action="save">
+            <g:form action="save">                
                 <fieldset class="form">
                     <f:all bean="categoria"/>
                 </fieldset>

@@ -14,6 +14,7 @@ class Estabelecimento {
 	String fone3
 	Date horaabertura
 	Date horafechamento
+	byte[] avatar
 
 	static belongsTo = [municipio: Municipio]
 	//static belongsTo = [user: municipio]
@@ -33,6 +34,7 @@ class Estabelecimento {
 		 fone3(blank: false)
 		 horaabertura(blank: false)
 		 horafechamento(blank: false)
+		 avatar(size:0..131072, nulable: true)
     }
 
     String toString() {
